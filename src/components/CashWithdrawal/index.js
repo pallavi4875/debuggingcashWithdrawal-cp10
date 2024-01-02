@@ -13,13 +13,11 @@ class CashWithdrawal extends Component {
     this.setState(prevState => ({balance: prevState.balance - value}))
   }
 
-  getFirstCharOfName = name => name.slice(0, 1)
-
   render() {
     const {denominationsList} = this.props
     const {balance} = this.state
     const name = 'Sarah Williams'
-    const initial = name.getFirstCharOfName(name)
+    const initial = name.slice(0, 1)
 
     return (
       <div className="app-container">
